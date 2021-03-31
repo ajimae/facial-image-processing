@@ -1,0 +1,19 @@
+### ping the elasticsearch server
+GET http://[::]:8056/ HTTP/1.1
+Content-Type: application/json
+
+### ping the elasticsearch server
+GET http://[::]:8056/api/v1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://[::]:8056/api/v1/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="sample.csv"
+Content-Type: text/csv
+
+# < ./avatar.jpg
+< ./sample.csv
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
